@@ -25,5 +25,11 @@ module.exports = {
         const messageIndex = messages.findIndex((message)=> message.id === +id)
         messages[messageIndex] = {id: +id, text, time}
         res.status(200).send(messages)
+    },
+    deleteMessage: (req, res, next) => {
+        const {id} = req.params
+        const i = messages.findIndex(message => message.id === +id)
+        messages.splice(i, 1)
+        res.status(200).send(messages)
     }
 }

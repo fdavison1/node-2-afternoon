@@ -10,6 +10,7 @@ app.get('/api/test', ctrl.test)
 app.post('/api/messages', ctrl.createMessage)
 app.get('/api/messages', ctrl.returnMessages)
 app.put('/api/messages/:id', ctrl.updateMessages)
+app.delete('/api/messages/:id', ctrl.deleteMessage)
 
 
 
