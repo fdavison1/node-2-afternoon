@@ -7,6 +7,7 @@ app.use(express.json())
 
 
 app.get('/api/test', ctrl.test)
+app.post('/api/messages', ctrl.createMessage)
 
 
 
